@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猪猪跳跃游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="gameInfo" class="mb-4 text-lg">
+            <span>关卡: <span id="levelDisplay">1</span></span>
+            &nbsp;&nbsp;
+            <span>生命: <span id="livesDisplay">3</span></span>
+            &nbsp;&nbsp;
+            <span>金币: <span id="coinsDisplay">0</span></span>
+            &nbsp;&nbsp;
+            <span>时间: <span id="timeDisplay">60</span></span>
+            &nbsp;&nbsp;
+            <span>连击: <span id="comboDisplay">0</span></span>
+        </div>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div id="controls" class="mt-4">
+            <button id="musicToggle" class="px-4 py-2 mr-2 bg-blue-500 text-white rounded">音乐 开/关</button>
+            <button id="soundToggle" class="px-4 py-2 bg-green-500 text-white rounded">音效 开/关</button>
+        </div>
+        <div id="gameOver" class="mt-4 p-4 bg-white rounded shadow" style="display: none;">
+            <h2 class="text-2xl font-bold mb-2">游戏结束</h2>
+            <p>得分: <span id="finalScore">0</span></p>
+            <button id="restartButton" class="mt-2 px-4 py-2 bg-red-500 text-white rounded">重新开始</button>
+        </div>
+        <div id="upgradeScreen" class="mt-4 p-4 bg-white rounded shadow" style="display: none;">
+            <h2 class="text-2xl font-bold mb-2">升级</h2>
+            <p>当前金币: <span id="currentCoins">0</span></p>
+            <button id="jumpForceUpgrade" class="mt-2 px-4 py-2 mr-2 bg-yellow-500 text-white rounded">
+                提升跳跃力 (花费: <span id="jumpForceCost">5</span>)
+            </button>
+            <button id="speedUpgrade" class="mt-2 px-4 py-2 mr-2 bg-purple-500 text-white rounded">
+                提升速度 (花费: <span id="speedCost">5</span>)
+            </button>
+            <button id="continueButton" class="mt-2 px-4 py-2 bg-blue-500 text-white rounded">继续游戏</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
